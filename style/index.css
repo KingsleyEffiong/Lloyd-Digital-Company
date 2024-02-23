@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+}
+body {
+    width: 100%;
+    height: 100%;;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.ttf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal; /* Specify the weight if needed */
+    font-style: normal; /* Specify the style if needed */
+  }
+header{
+    width: 100%;
+    height: 891px;
+    background-image:linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../Images/photovoltaic-system-2742302_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+header nav{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    display: flex;;
+    align-items: center;;
+    color: #fff;
+    animation: zoomIn 1s ease-in-out;
+}
+.navbar{
+    width: 500px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.navbar ul li{
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    transition: all ease-in-out 1s;
+    animation: zoomIn 1s ease-in-out;
+}
+.navbar ul li:hover{
+border-bottom: 2px solid #fff;
+}
+
+header nav .toggle-open{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    display: none;
+    right: 0;
+}
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #006262;
+    position: absolute;
+    top: 0;
+    right: -250px; /* Start with the sidebar hidden */
+    display: grid;
+    place-items: center;
+    z-index: 5;
+  }
+  
+  .sidebar.active {
+    right: 0; /* Show sidebar when active */
+    animation: slideInRight 1s ease-in-out forwards; /* Apply slide-in animation */
+  }
+  
+  .sidebar:not(.active) {
+    animation: slideOutRight 1s ease-in-out forwards; /* Apply slide-out animation when not active */
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      right: -250px; /* Start position */
+    }
+    100% {
+      right: 0; /* End position */
+    }
+  }
+  
+  @keyframes slideOutRight {
+    0% {
+      right: 0; /* Start position */
+    }
+    100% {
+      right: -250px; /* End position */
+    }
+  }
+
+ .sidebar .toggle-close{
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+}
+ .sidebar ul{
+    list-style: none;
+}
+ .sidebar ul li{
+    margin: 4em 0;
+    color: #fff;
+    cursor: pointer;
+}
+header .div{
+    width: 767px;
+    height: 360px;
+    position: absolute;
+    top: 445px;
+    left: 100px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.div .box1{
+    width:767px ;
+    height:154px ;
+}
+.div .box1 h2{
+font-weight: 500;
+font-size: 60px;
+color: #fff;
+animation: zoomIn 1s ease-in-out;
+line-height: 79.98px;
+}
+.box1 span{
+    font-style: italic;
+    font-family: Neue Montreal;
+    animation: zoomIn 1s ease-in-out;
+}
+.div .box2{
+    width:577px ;
+    height:90px ;
+    animation: zoomIn 1s ease-in-out;
+}
+.div .box2 span{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.div .box3{
+    width:767px ;
+    height:154px ;
+}
+.div .box3 button{
+    background-color: #03FEFE;
+    border: none;
+    width: 236px;
+    cursor: pointer;
+    animation: zoomIn 1s ease-in-out;
+    height: 60px;
+    gap: 10px;
+    border-radius: 16px;
+    transition: all ease-in-out 0.5s;
+}
+.div .box3 button:hover{
+    border: 1px solid #03FEFE;
+    background: none;
+    color: #fff;
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .div1{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+.section1 .div1 img{
+    width: 500px;
+    height: 500px;
+}
+.section1 .div1 p{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0.5e
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+.section2 .div1{
+    width: 1200px;
+    display: flex;
+    margin: 1em 0;
+    justify-content: space-between;
+    align-items: center;
+}
+   #image_container img{
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+.section2 .div1 p{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0.5em
+}
+.section3{
+    width: 100%;
+    height: 1200px;
+    text-align: center;
+    margin: 1em auto;
+}
+.section3 .galleries_image img{
+    width: 100%;
+    margin: 1em 0;
+    position: relative;
+    height: 1200px;
+}
+footer{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    background-color: rgb(0, 98, 98);
+    display: flex;
+    justify-content: space-around;;
+    color: #fff;
+    align-items: center;
+    font-size: 17px;
+}
+@media screen and (max-width: 1200px) {
+    .navbar ul{
+        display: none;
+    }
+    header nav .toggle-open{
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        animation: zoomIn 1s ease-in-out;
+        right: 3%;
+    }
+    .div .box1{
+        width:500px ;
+        height:90px ;
+    }
+    .div .box1 h2{
+        font-weight: 500;
+        font-size: 40px;
+        color: #fff;
+        animation: zoomIn 1s ease-in-out;
+        line-height: 50.98px;
+        }
+        .div .box2 span{
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .div .box3{
+            width:767px ;
+            height:154px ;
+        }
+        .div .box3 button{
+            background-color: #03FEFE;
+            border: none;
+            width: 176px;
+            cursor: pointer;
+            animation: zoomIn 1s ease-in-out;
+            height: 40px;
+            gap: 10px;
+            border-radius: 16px;
+            transition: all ease-in-out 0.5s;
+        }
+        .div .box3 button:hover{
+            border: 1px solid #03FEFE;
+            background: none;
+            color: #fff;
+        }
+        .sidebar.active{
+            right: 0;
+            animation: slideInRight 1s ease-in-out;
+            }
+            .section1 .div1{
+                width: 800px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .section1 .div1 img{
+                width: 300px;
+                height: 300px;
+            }
+            .section1 .div1 p{
+                font-size: 18px;
+                font-weight: 500;
+
+            }
+
+            .section2 .div1{
+                width: 800px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #image_container img{
+                width: 400px;
+                height: 200px;
+                position: relative;
+            }
+            .section2 .div1 p{
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0 0.5em;
+            }
+}
+@media screen and (max-width: 800px) {
+    header{
+        width: 100%;
+        height: 500px;
+        background-image:linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../Images/photovoltaic-system-2742302_1920.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    header .div{
+        width: 767px;
+        height: 360px;
+        position: absolute;
+        top: 175px;
+        left: 30px;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .div .box1{
+        width:470px ;
+        height:90px ;
+    }
+    .div .box1 h2{
+        font-weight: 500;
+        font-size: 24px;
+        color: #fff;
+        animation: zoomIn 1s ease-in-out;
+        line-height: 30.98px;
+        }
+        .div .box2{
+            width:350px ;
+            height:120px ;
+            animation: zoomIn 1s ease-in-out;
+        }
+        .div .box2 span{
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .div .box3{
+            width:767px ;
+            height:154px ;
+        }
+        .div .box3 button{
+            background-color: #03FEFE;
+            border: none;
+            width: 126px;
+            cursor: pointer;
+            animation: zoomIn 1s ease-in-out;
+            height: 40px;
+            gap: 10px;
+            border-radius: 16px;
+            transition: all ease-in-out 0.5s;
+        }
+        .div .box3 button:hover{
+            border: 1px solid #03FEFE;
+            background: none;
+            color: #fff;
+        }
+        .section1 .div1{
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section1 .div1 img{
+            width: 300px;
+            height: 300px;
+        }
+        .section1 .div1 p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .section2 .div1{
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        #image_container img{
+            width: 400px;
+            height: 200px;
+            position: relative;
+        }
+        .section2 .div1 p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+}
+@media screen and (max-width: 500px) {
+    header{
+        width: 100%;
+        height: 350px;
+        background-image:linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../Images/photovoltaic-system-2742302_1920.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .logo img{
+        width: 90px;
+        height: 90px;
+    }
+    .logo h3{
+        font-size: 11px;
+    }
+    header .div{
+        width: 767px;
+        height: 360px;
+        position: absolute;
+        top: 125px;
+        left: 30px;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .div .box1{
+        width:300px ;
+        height:30px ;
+    }
+    .div .box1 h2{
+        font-weight: 500;
+        font-size: 18px;
+        color: #fff;
+        animation: zoomIn 1s ease-in-out;
+        line-height: 30.98px;
+        }
+        .div .box2{
+            width:250px ;
+            height:80px ;
+            animation: zoomIn 1s ease-in-out;
+        }
+        .div .box2 span{
+            font-size: 10px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .div .box3{
+            width:767px ;
+            height:154px ;
+        }
+        .div .box3 button{
+            background-color: #03FEFE;
+            border: none;
+            width: 106px;
+            cursor: pointer;
+            animation: zoomIn 1s ease-in-out;
+            height: 40px;
+            gap: 10px;
+            border-radius: 16px;
+            transition: all ease-in-out 0.5s;
+        }
+        .div .box3 button:hover{
+            border: 1px solid #03FEFE;
+            background: none;
+            color: #fff;
+        }
+        .section1 .div1{
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section1 .div1 img{
+            width: 300px;
+            height: 300px;
+        }
+        .section1 .div1 p{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .section2 .div1{
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        #image_container img{
+            width: 350px;
+            height: 200px;
+            position: relative;
+        }
+        .section2 .div1 p{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .section3{
+            width: 100%;
+            height: 700px;
+            text-align: center;
+            margin: 1em auto;
+        }
+        .section3 .galleries_image img{
+            width: 100%;
+            height: 700px;
+        }
+        footer{
+            width: 100%;
+            height: 70px;
+            position: relative;
+            background-color: rgb(0, 98, 98);
+            display: flex;
+            justify-content: space-around;;
+            color: #fff;
+            align-items: center;
+            font-size: 12px;
+        }
+}
